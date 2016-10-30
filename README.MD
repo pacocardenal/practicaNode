@@ -38,10 +38,6 @@ La paginación se podrá realizar mediante:
 
 - sort = filtro_de_ordenación
 
-1.2. Registrar anuncios
-
-Se realizará mediante una orden POST con los datos anteriormente comentados en el apartado 1.1.1. Filtros anuncios
-
 2. Usuarios
 
 Los usuarios contendrán información de:
@@ -58,4 +54,4 @@ Se realizará mediante una orden POST con los datos anteriormente comentados
 
 Autenticación mediante JSON Web Token.
 
-Se accederá a la dirección /apiv1/authenticate
+Se accederá a la dirección /apiv1/authenticate. Será obligatorio para la visualización de anuncios.

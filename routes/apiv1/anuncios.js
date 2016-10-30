@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var express = require('express');
 var router = express.Router();
@@ -14,7 +14,7 @@ var jwtAuth = require('../../lib/jwtAuth');
 router.use(jwtAuth());
 
 // 1 - Listar anuncios
-router.get('/', function (req, res, next) {
+router.get('/', function (req, res) {
 
     var tag = req.query.tag;
     var venta = req.query.venta;
@@ -26,15 +26,6 @@ router.get('/', function (req, res, next) {
     var includeTotal = req.query.includeTotal;
     var language = req.query.language;
 
-    console.log('Tag', tag);
-    console.log('Venta', venta);
-    console.log('Nombre', nombre);
-    console.log('Precio', precio);
-    console.log('Start', start);
-    console.log('Limit', limit);
-    console.log('Sort', sort);
-    console.log('includeTotal', includeTotal);
-
     var filter = {};
 
     if (typeof venta !== 'undefined') {
@@ -43,14 +34,11 @@ router.get('/', function (req, res, next) {
 
     if (typeof tag !== 'undefined') {
         filter.tags =  tag;
-        console.log(filter.tags);
     }
 
     if (typeof precio !== 'undefined') {
         var range = precio.search('-');
         var length = precio.length - 1;
-        console.log('Range', range);
-        console.log('Length', length);
 
         if (range === 0) {
             filter.precio = {'$lte': precio.substr(1)};
@@ -66,17 +54,14 @@ router.get('/', function (req, res, next) {
     }
 
     if (typeof nombre !== 'undefined') {
-        filter.nombre = new RegExp('^' + nombre, "i");
+        filter.nombre = new RegExp('^' + nombre, 'i');
     }
 
-    console.log('Filter : ', filter);
     Anuncio.find(filter).skip(start).limit(limit).sort(sort)
         .then(function (anuncios) {
             res.json({success : true, anuncios : anuncios});
-        }).catch(function (err) {
-            console.log('Lenguaje: ', language);
+        }).catch(function () {
             funcionLocalizacion(language, 'ITEM_NOT_FOUND', function (mensajeMostrarError) {
-                console.log(mensajeMostrarError);
                 res.json({success:false, error: mensajeMostrarError});
             });
     });

@@ -5,8 +5,16 @@
       "decodificacion" : "Usuario no encontrado"
     },
     {
-      "clave" : "PAGE_NOT_FOUND",
-      "decodificacion" : "Página no encontrada"
+      "clave" : "ITEM_NOT_FOUND",
+      "decodificacion" : "Elemento no encontrado"
+    },
+    {
+      "clave" : "ERR_CREATE_USER",
+      "decodificacion" : "Error crear usuario"
+    },
+    {
+      "clave" : "ERR_LOGIN_USER",
+      "decodificacion" : "Error registrar usuario"
     }
   ],
   "en" : [
@@ -15,8 +23,12 @@
       "decodificacion" : "User not found"
     },
     {
-      "clave" : "PAGE_NOT_FOUND",
-      "decodificacion" : "Page not found"
+      "clave" : "ITEM_NOT_FOUND",
+      "decodificacion" : "Item not found"
+    },
+    {
+      "clave" : "ERR_LOGIN_USER",
+      "decodificacion" : "Error login user"
     }
   ]
 }
