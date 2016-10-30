@@ -1,0 +1,22 @@
+{
+  "es" : [
+    {
+      "clave" : "USER_NOT_FOUND",
+      "decodificacion" : "Usuario no encontrado"
+    },
+    {
+      "clave" : "PAGE_NOT_FOUND",
+      "decodificacion" : "Página no encontrada"
+    }
+  ],
+  "en" : [
+    {
+      "clave" : "USER_NOT_FOUND",
+      "decodificacion" : "User not found"
+    },
+    {
+      "clave" : "PAGE_NOT_FOUND",
+      "decodificacion" : "Page not found"
+    }
+  ]
+}

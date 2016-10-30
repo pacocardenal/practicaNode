@@ -1,0 +1,30 @@
+{
+  "es" : [
+    {
+      "clave" : "USER_NOT_FOUND",
+      "decodificacion" : "Usuario no encontrado"
+    },
+    {
+      "clave" : "ITEM_NOT_FOUND",
+      "decodificacion" : "Elemento no encontrado"
+    },
+    {
+      "clave" : "ERR_CREATE_USER",
+      "decodificacion" : "Error crear usuario"
+    }
+  ],
+  "en" : [
+    {
+      "clave" : "USER_NOT_FOUND",
+      "decodificacion" : "User not found"
+    },
+    {
+      "clave" : "ITEM_NOT_FOUND",
+      "decodificacion" : "Item not found"
+    },
+    {
+      "clave" : "ERR_CREATE_USER",
+      "decodificacion" : "Error create user"
+    }
+  ]
+}
